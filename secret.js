@@ -5,6 +5,9 @@ const clearBtn = document.getElementById("clearBtn");
 const status = document.getElementById("status");
 const storedData = document.getElementById("storedData");
 
+// Show the page now that JS has loaded
+document.body.style.display = "block";
+
 // Update displayed storage
 function updateDisplay() {
   const data = localStorage.getItem("myStorage");
