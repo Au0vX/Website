@@ -1,12 +1,11 @@
 // ===== STORAGE SYSTEM =====
+document.body.style.display = "block"; // Show page now
+
 const dataInput = document.getElementById("dataInput");
 const sendBtn = document.getElementById("sendBtn");
 const clearBtn = document.getElementById("clearBtn");
 const status = document.getElementById("status");
 const storedData = document.getElementById("storedData");
-
-// Show the page now that JS has loaded
-document.body.style.display = "block";
 
 // Update displayed storage
 function updateDisplay() {
@@ -17,7 +16,7 @@ function updateDisplay() {
 // Save data
 sendBtn.addEventListener("click", () => {
   const value = dataInput.value.trim();
-  if(value) {
+  if (value) {
     localStorage.setItem("myStorage", value);
     status.textContent = "Data saved!";
     dataInput.value = "";
